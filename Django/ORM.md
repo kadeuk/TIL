@@ -20,18 +20,18 @@ from burgers.models import Burger
 # 데이터베이스에서 모든 정보를 가져오기
 Burger.objects.all()
 # 결과
-<QuerySet [<Burger: 더블와퍼>, <Burger: 트러플머쉬룸X>, <Burger: 통새우와퍼>]>
+<QuerySet [<Burger: 새우버거>, <Burger: 새우없는버거>, <Burger: 두배버거>]>
 
 # 데이터베이스에서 특정 조건을 만족하는 한개의 정보를  가져오기
-Burger.objects.get(name="더블와퍼")
+Burger.objects.get(name="새우버거")
 # 결과
-<Burger: 더블와퍼>
+<Burger: 새우버거>
 
 # 데이터베이스에서 특정 조건을 만족하는 여러개의 정보를 가져오기
-burgers = Burger.objects.filter(name__endswith="와퍼")
+burgers = Burger.objects.filter(name__endswith="새우")
 print(burgers)
 #결과
-<QuerySet [<Burger: 더블와퍼>, <Burger: 통새우와퍼>]>
+<QuerySet [<Burger: 새우버거>, <Burger: 새우없는버거>]>
 
 
 ```
@@ -44,6 +44,6 @@ print(burgers)
 2
 
 >>> burgers[0]
-<Burger: 더블와퍼>
+<Burger: 새우버거>
 
 ```
